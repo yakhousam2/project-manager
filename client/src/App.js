@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [user, setUser] = useState({ id: "", username: "" });
+  const handleClick = async () => {
+    try {
+      const res = await fetch("api/getuserinfos");
+      console.log(res)
+      const json = await res.json();
+      console.log(json)
+      const {id, username} = json
+      setUser({id, username})
+    } catch (error) {
+      console.error(error)
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Get user info</h1>
+      <button onClick={handleClick}>Click me!</button>
+      <h2>id: {user.id}</h2>
+      <h2>username: {user.username}</h2>
+      <a href='/logout'>Logout (work only in production mode)</a>
     </div>
   );
 }
