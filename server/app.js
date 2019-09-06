@@ -5,8 +5,8 @@ const passport = require("passport");
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 const flash = require("connect-flash");
-const morgan = require('morgan')
-const cors = require('cors')
+// const morgan = require('morgan')
+// const cors = require('cors')
 
 const authRoute = require("./routes/auth");
 const auth = require("./controllers/passport");
@@ -14,8 +14,8 @@ const userapi = require("./api/user");
 
 const app = express();
 auth();
-app.use(morgan("tiny"))
-app.use(cors())
+// app.use(morgan("tiny"))
+// app.use(cors())
 
 const PORT = process.env.PORT || 3001;
 const dev = process.env.NODE_ENV !== "production";
