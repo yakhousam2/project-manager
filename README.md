@@ -1,12 +1,12 @@
 # project-manager
 ## how to install
-cd server <br >
+
 npm i <br >
 cd .. <br >
 cd client  <br >
 npm i <br >
 # how to run
-cd server <br >
+
 npm start <br >
 cd client <br >
 npm start <br >
