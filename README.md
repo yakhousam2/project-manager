@@ -13,7 +13,7 @@ npm start <br >
 # how to use it
 go to http://localhost:3001 and login <br >
 got to http://localhost:3000 and fetch data <br >
-# how to run in prodaction mode 
+# how to run in production mode 
 cd client <br >
 npm run build <br >
 open server/index.js <br >
