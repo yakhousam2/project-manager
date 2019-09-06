@@ -1,0 +1,17 @@
+html, body{
+    margin:0;
+    padding: 0;
+    background: rgb(163, 241, 18);
+}
+.form-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.form-register{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}

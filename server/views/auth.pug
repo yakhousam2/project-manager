@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+  head
+    meta(http-equiv="Content-Type" content="text/html;charset=UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/static/css/style.css")
+    title Project Mananger Authentication
+  body
+    .main-container
+      .form-container
+        form.form-login(action="/login" method="post" autocomplete="off")
+          h1 Login
+          if error.length
+            p= error
+          input#username(type="text" name="username" placeholder="User name" )
+          input#password(type="password" name="password" placeholder="Password")
+          input.btn-social-login(type="submit" value="Login")
+        form.form-register(action="/register" method="post")
+          h1 Register
+          if usernameError.length > 0
+            .error= usernameError
+          input#username(type="text" name="username" placeholder="Username" minlength=2 required )
+          if passwordError.length > 0
+            .error= passwordError
+          input#password(type="password" name="password" placeholder="Password" minlength=8 required  )
+          input#password(type="password" name="password2" placeholder="Confirm password")
+          input.btn-social-login(type="submit" value="Register")
