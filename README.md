@@ -4,7 +4,7 @@ cd server <br >
 npm i <br >
 cd .. <br >
 cd client  <br >
-pm i <br >
+npm i <br >
 # how to run
 cd server <br >
 npm start <br >
